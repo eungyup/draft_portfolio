@@ -1,0 +1,901 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.1em;
+}
+
+main > *{
+    margin: 0 2%;
+}
+
+header{
+    border-bottom: 3px solid #035B96;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header a{
+    color: black;
+    display: block;
+}
+
+footer a{
+    display: block;
+}
+
+header li, footer li{
+    margin: 5px 0;
+    font-size: 1.1em;
+    line-height: 1.2em;;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.nav_header li:hover, .nav_footer li:hover{
+    background-color: rgb(255, 240, 75);
+    color: black;
+}
+
+.nav_header li a:hover, .nav_footer li a:hover{
+    color: black;
+}
+
+#logo{
+    /* width: 50%; */
+    max-height:30vh;
+    display: block;
+    margin: 0 auto;
+}
+
+.nav_header li {
+    min-width: 150px;
+    font-size: 18px;
+}
+
+#home, #about, #interaction, #contextual{
+    border: 1px solid black;
+    background-color: rgb(255, 240, 75);
+    box-shadow: 2px 2px lightgrey;
+    font-weight: bold;
+}
+
+
+h1{
+    font-size: 1.6em;
+}
+
+h2{
+    font-size: 1.4em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+h1,h2,h3{
+    margin: 2% 0;
+    /* padding: 2%; */
+    color: #035B96;
+    /* text-align: center; */
+}
+
+.parent_section h3{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+/* Responsive Web */
+img{
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Jump to Content */
+a.jump{
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 0.5s ease-out;
+    transition: top 0.5s ease-out;
+    /* My need to change this in different media queries */
+    color:black;
+    padding: 5px;
+}
+
+a.jump:focus{
+    top: 10px;
+    border: 2px solid black;
+}
+
+.nav_header, .nav_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav_header ul, .nav_footer ul{
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    background-color: #035B96;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+footer a{
+    color: white;
+}
+
+
+/* 
+Home Page
+*/
+.resume, .email{
+    /* border: 2px solid #035B96; */
+    background-color: rgb(255, 240, 75);
+    color: #4D4D4D;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2% auto;
+    font-size: 20px;
+    width: 100px;
+    padding: 7px 0;
+    border-radius: 15px;
+    box-shadow: 2px 2px lightgrey;
+} 
+
+.extra_resource{
+    margin-left: 1%;
+    text-align: center;
+}
+
+.resume:hover, .email:hover{
+    background-color: rgb(255, 81, 126);
+}
+
+.home_flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.home_flex_item{
+    text-align: center;
+}
+
+.home_flex_item:hover{
+    border: 2px solid #035B96;
+    border-radius: 10px;
+    box-shadow: 3px 3px lightgrey;
+}
+
+.home_flex_item a:visited{
+    color: black;
+}
+
+/* 
+#project_list li{
+    margin-bottom: 1%;
+} */
+/* .learn_more{
+    margin-top: 5%;
+    margin-bottom: 5%;
+} */
+/* 
+#learn_more{
+    margin-bottom: 0;
+} */
+
+#project_list li img{
+    width:50%;
+}
+
+#project_list li:hover{
+    border: 3px solid #035B96;
+    border-radius: 15px;
+}
+
+#project_list a{
+    color:black
+}
+
+/* 
+(my) One of the techniques listed here: https://cssnewbie.com/10-beautiful-css-text-effects/#.XYbceJNKjOR
+*/
+
+.my_projects{
+    background-color: #f1f6fb;
+    margin:0;
+    padding:2%;
+}
+
+.home_grid, .about_grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+#home_header_one{
+    margin:2%
+}
+
+.summary h2{
+    padding-left: 0;
+}
+
+/* Flip Card CSS */
+.main_container{
+    position: relative;
+    width: 250px;
+    height: 320px;
+}
+
+.the_card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.the_card:hover{
+    transform: rotateY(180deg);
+}
+
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 240, 75);
+    backface-visibility: hidden;
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: red;
+    transform: rotateY(180deg);
+}
+
+
+/* 
+About Page
+*/
+#about_img{
+    margin: 2% auto 2% auto;
+}
+
+.education{
+    background-color: #f1f6fb;
+    margin: 0;
+    padding:2%;
+}
+
+.parent_section{
+    width: 80%;
+    height: 130%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2%;
+    position: relative;
+    z-index: 0;
+    margin: 3% auto 5% auto;
+}
+
+.first_section, .third_section{
+    position: absolute;
+    top: -7%;
+    left: 5%;
+    z-index: 1;
+    background-color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.second_section{
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    z-index: 1;
+    background-color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.list_item{
+    list-style-type: none;
+    line-height: 1.2em;
+    margin-top: 2%;
+}
+
+.experience{
+    margin:0;
+    padding:2%;
+}
+
+.experience .first_section
+{
+    top: -5%;
+}
+
+.experience .second_section{
+    top: -6%
+}
+
+.education h2,
+.experience h2{
+    padding-bottom: 2%;;
+}
+
+.list_item_experience{
+    list-style-position: inside;
+    line-height: 1.2em;
+    margin-top: 1.5%;
+}
+
+.job_list{
+    font-style: italic;
+    font-weight: bold;
+    margin: 1% 0;
+}
+.certificate{
+    background-color: #f1f6fb;
+    margin:0;
+    padding:2%;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gallery img{
+    width: 80vw;
+    margin: 20px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+}
+
+.gallery img:hover{
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+
+/* Contact Form */
+.contact{
+    min-height: 30vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    margin: 1% auto;
+}
+
+.contact_info, .contact_radio, .contact_text{
+    border: 2px solid black;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.contact_info, .contact_text{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 5px;
+}
+.contact_info > label{
+    text-align: right;
+}
+
+.contact_info > input{
+    width: 60%;
+    /* margin: 0; */
+    padding: 0;
+    margin-bottom: 2%;
+}
+
+.asterisks{
+    color: #B30000;
+}
+
+.explain_asterisks{
+    padding-left: 5%;
+}
+
+#contact_intro{
+    padding: 0 0 2% 1%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+legend{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+textarea{
+    width: 80%;
+    min-height: 15vh;
+    margin: 2% 0;
+}
+
+input[type=submit]{
+    background-color: rgb(255, 240, 75);
+    color: #4D4D4D;
+    padding: 3%;
+    margin-left: 10%;
+    justify-items: center;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    font-size: 1.15em;
+    border-radius: 15px;
+    margin-bottom: 3%;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(255, 81, 126);
+}
+
+.submit{
+    text-align: center;
+}
+
+/* 
+interaction-design page
+*/
+
+/* Parallax image*/
+.interaction_design_background{
+    /* The image of ux_ui_design.svg was downloaded from https://elements.envato.com/74-design-flat-icons-68APSA */
+    background-image: url(../images/ux_ui_design.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    height: 300px;
+}
+
+
+#interaction_img{
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* .project_example{
+    background-color: #f1f6fb;
+    margin: 0;
+    padding: 2%;
+} */
+
+.grid_container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 30px;
+    justify-content: center;
+}
+
+.grid_container img{
+    margin: 0 auto;
+    min-width: 80%;
+    border:2px solid #035B96;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.video_container{
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.grid_container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border:2px solid #035B96; */
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+.grid_container:nth-child(even){
+    background-color: #f1f6fb;
+    margin: 0;
+    padding: 2%;
+}
+
+#story_mapping{
+    height: 419px;
+}
+.project_text{
+    margin-bottom: 5%;
+}
+
+.project_text ul{
+    list-style-position: inside;
+    text-indent: 1.2em;
+    padding: 1% 0;
+}
+
+/* 
+Contextual Inquiry Page
+*/
+#contextual_img{
+    width: 40%;
+    margin: 0 auto 5% auto;
+}
+
+/* Parallax image*/ 
+.contextual_inquiry_background{
+    /* The image of ux_ui_design.svg was downloaded from https://elements.envato.com/74-design-flat-icons-68APSA */
+    background-image: url(../images/contextual_inquiry.svg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    height: 300px;
+}
+
+.interviewee{
+    padding-top: 1%;
+    font-weight: bold;
+}
+
+
+
+/* 
+For Tablet View
+*/
+@media all and (min-width: 768px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 1%;
+        border-bottom: none;
+    }
+
+    header ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    header li{
+        display: inline-block;
+        /* border-right: 1px solid black; */
+    }
+
+    .nav_header{
+        margin-right: 2%;
+    }
+
+    .nav_header li{
+        min-width: 100px;
+    }
+    
+    .long_list li{
+        max-width: 15vw;
+    }
+    /* .header{
+        text-align: left;
+    } */
+
+    /* .nav_header li a{
+        display: block;
+        margin: auto auto;
+    } */
+
+    #logo{
+        margin: 4% 4% 0 0;
+        padding-left: 5%;
+    }
+
+    /* .nav_header{
+        justify-content: left;
+        margin-left: 1%
+    } */
+
+    /* Home Page */
+    #home_main_pic{
+        margin: 0 auto;
+    }
+
+    .learn_more{
+        text-align: center;
+    }
+
+    .resume,
+    .email{
+        display: inline-block;
+        margin-right: 2%;
+    }
+
+    .home_flex{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .home_flex_item{
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+
+    #interaction_img,
+    #contextual_img{
+        display: inline-block;
+        width: 90%;
+    }
+
+    /* About */
+    .gallery img{
+        width: 320px;
+    }
+
+
+/* Animation */
+@-webkit-keyframes gallery_wiggle{
+    /* Eungyu's Code */
+    from {
+      width: 320px;
+    }
+    to {
+      /* width: 325px; */
+      width: 380px;
+    }
+  }
+  
+  @keyframes gallery_wiggle{
+    /* Eungyu's Code */
+    from {
+      width: 320px;
+    }
+    to {
+      /* width: 325px; */
+      width: 380px
+    }
+  } 
+  
+  .gallery_img:hover{
+    /* Eungyu's Code */
+    -webkit-animation-name: gallery_wiggle;
+            animation-name: gallery_wiggle;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+
+  /* Interaction Design & Contextual Inquiry */
+
+  .interaction_design_background{
+    background-size: 50% 100%;
+    height: 420px;
+  }
+  
+  .contextual_inquiry_background{
+    background-size: 30% 100%;
+    height: 420px;
+  }
+
+}
+
+/* For Laptop/Desktop view */
+@media all and (min-width: 1024px){
+    /* Home Page & About Page*/
+    .home_grid, .about_grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 2%;
+        margin: 0 4% 2% 4%;
+    }
+
+    .about_grid{
+        column-gap: 0;
+    }
+
+    .about_grid{
+        justify-content: center;
+    }
+
+    /* About */
+    #about_img{
+        margin-top: 0;
+    }
+
+    .learn_more{
+        text-align: left;
+    }
+
+    /* Animation */
+    @-webkit-keyframes gallery_wiggle{
+    /* Eungyu's Code */
+    from {
+      width: 320px;
+    }
+    to {
+      width: 420px;
+    }
+  }
+  
+  @keyframes gallery_wiggle{
+    /* Eungyu's Code */
+    from {
+      width: 320px;
+    }
+    to {
+      width: 420px;
+    }
+  } 
+    /* .summary{
+
+    } */
+
+    /* 
+    Grid of Interaction Design Page & Contextual Inquiry Page
+    */
+    .grid_container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 10%;
+        margin: 0 4% 10% 4%;
+    }
+
+    .grid_container:nth-child(even){
+        margin: 0 0 7% 0;
+    }
+
+    .grid_container:last-child{
+        margin-bottom: 3%;
+    }
+
+    .grid_container img{
+        width: 560px;
+    }
+
+    /* Interaction Design Grid Order */
+    #hi_fi_text{
+        order: 0;
+    }
+
+    #hi_fi_video{
+        order: 1;
+    }
+
+    #low_fi_text{
+        order: 3;
+    }
+
+    #low_fi_video{
+        order: 2;
+    }
+
+    #personas1_text{
+        order: 4;
+    }
+
+    #persona1_img{
+        order: 5;
+    }
+
+    #personas2_text{
+        order: 7;
+    }
+
+    #personas2_img {
+        order: 6;
+    }
+
+    #personas3_text{
+        order: 8;
+    }
+
+    #persona3_img{
+        order: 9;
+    }
+
+    #persona4_text{
+        order: 11;
+    }
+
+    #persona4_img{
+        order: 10;
+    }
+
+    #stroyboarding1_text{
+        order: 12;
+    }
+
+    #stroyboarding1_img{
+        order: 13;
+    }
+
+    #storyboarding2_text{
+        order: 15;
+    }
+
+    #stroyboarding2_img{
+        order: 14;
+    }
+
+    /* Contextual Inquiry Grid Order */
+    #interview_text{
+        order: 0;
+    }
+
+    #interview_img{
+        order: 1;
+    }
+
+    #affinity_wall_text{
+        order: 3;
+    }
+
+    #affinity_wall_img{
+        order: 2;
+    }
+
+    #final_presentation_text{
+        order: 4;
+    }
+
+    #final_presentation_img{
+        order: 5;
+    }
+}
+
+@media all and (min-width: 1240px){
+    /* Increased font size */
+    body{
+        font-size: 1.1em;
+    }
+
+    main > *{
+        margin: 0 3%;
+    }
+
+    /*
+    Interaction Design Page and Contextual Inquiry Page
+    */
+    .interaction_design_background{
+        background-size: 42% 100%;
+        height: 420px;
+      }
+      
+      .contextual_inquiry_background{
+        background-size: 25% 100%;
+        height: 420px;
+      }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+
+    .gallery_img:hover{
+        animation: none;
+        animation-name: none;
+        animation-duration: none;
+        animation-iteration-count: none;
+    }
+}
